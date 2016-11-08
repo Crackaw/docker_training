@@ -9,7 +9,7 @@ ENV MYSQL_ROOT_PASS pass
 ENV MYSQL_DB wordpress
 
 RUN apt-get update && \
-	apt-get install -y --no-install-recommends apache2 && \
+	apt-get install -y --no-install-recommends apache2 \
 	php5 \
 	php5-mysql \
 	mysql-server \
