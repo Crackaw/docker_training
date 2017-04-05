@@ -1,6 +1,6 @@
 FROM debian:jessie
 
-MAINTAINER Jacek Placek placek@is2sexy4u.com
+LABEL maintainer="Jacek Placek placek@is2sexy4u.co"
 
 EXPOSE 80
 
