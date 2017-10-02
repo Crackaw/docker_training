@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:8
 
 LABEL maintainer="Jacek Placek placek@is2sexy4u.co"
 
