@@ -30,6 +30,7 @@ RUN wget --no-check-certificate https://wordpress.org/wordpress-${WORDPRESS_VER}
 	rm /*.tar.gz
 
 
-CMD service mysql start && \
+CMD find /var/lib/mysql -type f -exec touch {} \; && \
+	service mysql start && \
 	/root/startup.sh && \
 	/usr/sbin/apache2ctl -D FOREGROUND
