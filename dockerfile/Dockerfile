@@ -19,7 +19,7 @@ RUN apt-get update && \
 	rm -R /var/www/html/* && \
 	a2enmod rewrite
 
-ADD templates /
+COPY templates /
 RUN chmod +x /root/startup.sh
 
 ARG WORDPRESS_VER=4.6.1
