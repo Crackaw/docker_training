@@ -22,7 +22,7 @@ RUN apt-get update && \
 COPY templates /
 RUN chmod +x /root/startup.sh
 
-ARG WORDPRESS_VER=4.6.1
+ARG WORDPRfindESS_VER=4.6.1
 
 RUN wget --no-check-certificate https://wordpress.org/wordpress-${WORDPRESS_VER}.tar.gz && \
 	tar zxfp /*.tar.gz -C /var/www/html/ --strip 1 && \
@@ -30,7 +30,6 @@ RUN wget --no-check-certificate https://wordpress.org/wordpress-${WORDPRESS_VER}
 	rm /*.tar.gz
 
 
-CMD find /var/lib/mysql -type f -exec touch {} \; && \
-	service mysql start && \
+CMD  service mysql start && \
 	/root/startup.sh && \
 	/usr/sbin/apache2ctl -D FOREGROUND
