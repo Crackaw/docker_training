@@ -22,7 +22,7 @@ RUN apt-get update && \
 COPY templates /
 RUN chmod +x /root/startup.sh
 
-ARG WORDPRfindESS_VER=4.6.1
+ARG WORDPRESS_VER=4.6.1
 
 RUN wget --no-check-certificate https://wordpress.org/wordpress-${WORDPRESS_VER}.tar.gz && \
 	tar zxfp /*.tar.gz -C /var/www/html/ --strip 1 && \
